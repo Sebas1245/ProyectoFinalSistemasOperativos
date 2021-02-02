@@ -1,6 +1,7 @@
 #include <iostream>
 #include "peluquero.cpp"
-
+#include  "P9.cpp"
+#include "P7.cpp"
 using namespace std;
 
 void correrProblema1()
@@ -22,6 +23,8 @@ void correrProblema2()
   cout << "\tEl productor siempre produce un dato cada vez y e consumidor debe tomar de dos datos a la vez.\n";
   cout << "\tSuponiendo que el buffer comun es de tamanio 2, plantee una solucion al problema usando semaforos.\n";
   // correr problema Consumidor productor
+  RunP7();
+
 }
 
 void correrProblema3()
@@ -34,6 +37,7 @@ void correrProblema3()
   cout << "\tPara que los procesos de hidrogeno puedan ejecutar la función de Union() tiene que estar otro proceso de Hidrogeno y un proceso de Oxigeno en la barrera." << endl;
   cout << "\tHay n procesos de hidrogeno y n procesos de oxigeno" << endl;
   // correr problema H2O
+  RunPH2O();
 }
 
 void desplegarOpcionesSimulacion()
@@ -41,7 +45,7 @@ void desplegarOpcionesSimulacion()
   cout << "Oprima un numero para elegir alguna de las siguientes opciones" << endl;
   cout << "1. Problema de la peluqeria" << endl;
   cout << "2. Ejercicio 7 - Problema Productor/Consumidor" << endl;
-  cout << "3. Ejercicio 9 - Problema Productor/Consumidor" << endl;
+  cout << "3. Ejercicio 9 - Problema Problema H2O" << endl;
   cout << "4. Regresar al menu principal" << endl;
 }
 

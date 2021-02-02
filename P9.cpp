@@ -31,7 +31,7 @@ void Oxigeno()
     //cout << " ** Moleculas de H2O totales: " << h20 << endl;
 }
 
-int main()
+int RunPH2O()
 {
     vector<thread> tH;
     vector<thread> tO;

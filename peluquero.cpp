@@ -1,7 +1,7 @@
 #include <iostream>
-#include "semaphore.h"
 #include <thread>
 #include <vector>
+#include "semaphore.h"
 using namespace std;
 
 Semaphore sCliente(0);
@@ -11,54 +11,54 @@ Semaphore sPeluquero(0);
 int N = 10;
 int numClientes = 0;
 
-void Peluquero(const int &tid)
+void Peluquero()
 {
   int clientsServed = 3;
   while (--clientsServed)
   {
-    sCliente.wait(tid);
-    sAccesoClientes.wait(tid);
+    sCliente.P();
+    sAccesoClientes.P();
     numClientes--;
-    sPeluquero.notify(tid);
-    sAccesoClientes.notify(tid);
+    sPeluquero.V();
+    sAccesoClientes.V();
     // cortar pelo
+    cout << "Ha salido un cliente!" << endl;
   }
 }
 
-void Cliente(const int &tid)
+void Cliente()
 {
-  cout << "Ha entrado un cliente a la peluqueria con ID = " << tid << endl;
-  sAccesoClientes.wait(tid);
+  cout << "Ha entrado un cliente a la peluqueria " << endl;
+  sAccesoClientes.P();
   if (numClientes < N)
   {
     numClientes++;
-    sCliente.notify(tid);
-    sAccesoClientes.notify(tid);
-    sPeluquero.wait(tid);
+    sCliente.V();
+    sAccesoClientes.V();
+    sPeluquero.P();
     // le cortan el pelo
-    cout << "El cliente " << tid << " ya tiene el pelo corto!" << endl;
   }
   else
   {
-    sAccesoClientes.notify(tid);
+    sAccesoClientes.V();
   }
 }
 
 int RunSimulation(int clients)
 {
-  vector<thread> children;
+  vector<thread> clientThs;
   thread p([&]() {
-    Peluquero(10);
+    Peluquero();
   });
 
   for (int i = 0; i < clients; i++)
   {
-    cout << "Creando un thread nuevo" << endl;
-    children.push_back(thread(Cliente, i));
+    clientThs.emplace_back(Cliente);
   }
-  for (int i = 0; i < children.size(); i++)
+  /* Se termina la ejecucion de los threads y se unen al main */
+  for (auto &t : clientThs)
   {
-    children[i].join();
+      t.join();
   }
 
   p.join();

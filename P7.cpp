@@ -28,7 +28,7 @@ void Consumidor()
   cout << "\n+1 cooperación exitosa";
 }
 
-int main()
+int RunP7()
 {
   thread t1(Productor);
   thread t2(Consumidor);
