@@ -38,6 +38,7 @@ int RunPH2O()
     int iH, iO;
 
     /* Input dinamico de procesos */
+    cout << "NOTA: Para que se terminen de ejecutar todos los procesos exitosamente se deben generar el DOBLE de Hidrogenos que de Oxigenos." << endl;
     cout << "Cuantos Hidrogenos?: " << endl;
     cin >> iH;
     cout << "Cuantos Oxigenos?: " << endl;

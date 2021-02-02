@@ -45,7 +45,7 @@ void desplegarOpcionesSimulacion()
   cout << "Oprima un numero para elegir alguna de las siguientes opciones" << endl;
   cout << "1. Problema de la peluqeria" << endl;
   cout << "2. Ejercicio 7 - Problema Productor/Consumidor" << endl;
-  cout << "3. Ejercicio 9 - Problema Problema H2O" << endl;
+  cout << "3. Ejercicio 9 - Problema H2O" << endl;
   cout << "4. Regresar al menu principal" << endl;
 }
 
