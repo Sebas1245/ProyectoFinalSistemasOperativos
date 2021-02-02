@@ -14,7 +14,8 @@ public:
   {
     std::unique_lock<std::mutex> lock(mtx);
     count++;
-    cv.notify_one(); //Avisa que se libero +1 en el semaforo
+    //Avisa que se libero +1 en el semaforo
+    cv.notify_one();
   }
 
   //Funcion para checar si hay disponibilidad y bloquear si no
@@ -30,7 +31,9 @@ public:
   }
 
 private:
+
   std::mutex mtx;             //Ayuda a bloquear el proceso
   std::condition_variable cv; //Ayuda a avisar que se libera un recurso
   int count;                  //Contador del semaforo
+
 };
