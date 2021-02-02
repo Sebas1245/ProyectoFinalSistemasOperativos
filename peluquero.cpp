@@ -11,10 +11,10 @@ Semaphore sPeluquero(0);
 int N = 10;
 int numClientes = 0;
 
-void Peluquero()
+void Peluquero(int inputClients)
 {
-  int clientsServed = 3;
-  while (--clientsServed)
+  int clientsServed = inputClients;
+  while (clientsServed--)
   {
     sCliente.P();
     sAccesoClientes.P();
@@ -48,7 +48,7 @@ int RunSimulation(int clients)
 {
   vector<thread> clientThs;
   thread p([&]() {
-    Peluquero();
+    Peluquero(clients);
   });
 
   for (int i = 0; i < clients; i++)
