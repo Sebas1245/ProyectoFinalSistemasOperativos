@@ -9,22 +9,25 @@ public:
   {
   }
 
-  inline void notify(int tid)
+  //Funcion para aumentar semaforo/liberar un recurso
+  inline void V()
   {
     std::unique_lock<std::mutex> lock(mtx);
     count++;
-    //notify the waiting thread
+    //Avisa que se libero +1 en el semaforo
     cv.notify_one();
   }
-  inline void wait(int tid)
+
+  //Funcion para checar si hay disponibilidad y bloquear si no
+  inline void P()
   {
     std::unique_lock<std::mutex> lock(mtx);
     while (count == 0)
     {
-      //wait on the mutex until notify is called
+      //Esperar hasta que haya una V/el semaforo este en 1 o mas
       cv.wait(lock);
     }
-    count--;
+    count--; //Resta un recurso
   }
 
 private:
