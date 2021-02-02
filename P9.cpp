@@ -1,5 +1,6 @@
 #include <iostream>
 #include <thread>
+#include <vector>
 #include "semaphore.h"
 
 using namespace std;
@@ -28,8 +29,45 @@ void Consumidor()
   cout << "\n+1 cooperación exitosa";
 }
 
-int main()
+int RunP7()
 {
+  vector<thread> tP;
+  vector<thread> tC;
+  int iP, iC;
+
+  cout << "¿Cuántos productores?: " << endl;
+  cin >> iP;
+  cout << "¿Cuántos consumidores?: " << endl;
+  cin >> iC;
+
+  // Creación de procesos de productor
+  for (int i = 0; i < iP; i++)
+  {
+    tP.emplace_back(Productor);
+  }
+
+  // Creación de procesos de consumidor
+  for (int i = 0; i < iC; i++)
+  {
+    tC.emplace_back(Consumidor);
+  }
+
+  // Se termina la ejecucion de los threads y se unen al main
+  for (auto &t : tP)
+  {
+    t.join();
+  }
+
+  for (auto &t : tC)
+  {
+    t.join();
+  }
+
+  cout << "\nCooperaciones exitosas: " << coop << endl;
+
+  /* 
+  // Input manual de productores y consumidores
+
   thread t1(Productor);
   thread t2(Consumidor);
   thread t3(Productor);
@@ -43,8 +81,7 @@ int main()
   t4.join();
   t5.join();
   t6.join();
-
-  cout << "\nCooperaciones exitosas: " << coop << endl;
+  */
 
   return 0;
 }
