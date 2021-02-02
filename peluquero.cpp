@@ -11,8 +11,10 @@ Semaphore sPeluquero(0);
 int N = 10;
 int numClientes = 0;
 
-void Peluquero(const int& tid) {
-  while (true) {
+void Peluquero(const int &tid)
+{
+  while (true)
+  {
     sCliente.wait(tid);
     sAccesoClientes.wait(tid);
     numClientes--;
@@ -22,43 +24,42 @@ void Peluquero(const int& tid) {
   }
 }
 
-void Cliente(const int& tid) {
+void Cliente(const int &tid)
+{
   cout << "Ha entrado un cliente a la peluqueria con ID = " << tid << endl;
   sAccesoClientes.wait(tid);
-  if (numClientes < N) {
+  if (numClientes < N)
+  {
     numClientes++;
     sCliente.notify(tid);
     sAccesoClientes.notify(tid);
     sPeluquero.wait(tid);
     // le cortan el pelo
     cout << "El cliente " << tid << " ya tiene el pelo corto!" << endl;
-  } else {
+  }
+  else
+  {
     sAccesoClientes.notify(tid);
   }
 }
 
-int RunSimulation() {
+int RunSimulation(int clients)
+{
   vector<thread> children;
-
-  thread t0([&]() {
-    Cliente(0);
-  });
-
-  thread t1([&]() {
-    Cliente(1);
-  });
-
-  thread t2([&]() {
-    Cliente(2);
-  });
-
   thread p([&]() {
     Peluquero(10);
   });
 
-  t0.join();
-  t1.join();
-  t2.join();
+  for (int i = 0; i < clients; i++)
+  {
+    cout << "Creando un thread nuevo" << endl;
+    children.push_back(thread(Cliente, i));
+  }
+  for (int i = 0; i < children.size(); i++)
+  {
+    children[i].join();
+  }
+
   p.join();
   return 0;
 }
