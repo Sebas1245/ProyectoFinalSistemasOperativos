@@ -20,9 +20,9 @@ Fortalecer el aprendizaje sobre la sincronización de procesos en un aplicación
 * Componentes del Código
   * Lenguaje de Programación	
   * Menú del Programa
-  * Programa 1:
-  * Programa 2:
-  * Programa 3:	
+  * Programa 1: Problema de la peluquería
+  * Programa 2: Ejercicio 7 - Problema Productor/Consumidor
+  * Programa 3:	Ejercicio 9 - Problema H2O
 * Video de Demostración
 * Breve descripción	
 
@@ -61,3 +61,5 @@ Crear una aplicación que haga uso de threads y locks (semáforos)
 
 
 # Setup para utilizar Proyecto
+Clona este repositorio a tu directorio local de preferencia. Este proyecto fue desarollado con una librería especializada de `C++` llamada `<thread>` por lo que requiere compilarse con `C++11`o superior. El comando recomendado para su compilación manual es: 
+`g++ -pthread -std=c++17 main.cpp -o main`
