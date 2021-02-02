@@ -13,7 +13,8 @@ int numClientes = 0;
 
 void Peluquero(const int &tid)
 {
-  while (true)
+  int clientsServed = 3;
+  while (--clientsServed)
   {
     sCliente.wait(tid);
     sAccesoClientes.wait(tid);
