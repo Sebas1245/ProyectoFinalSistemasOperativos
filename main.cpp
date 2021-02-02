@@ -21,7 +21,6 @@ void correrProblema2()
   cout << "Supongamos que se tienen dos procesos concurrentes que cooperan como productor y consumidor con la siguiente restricción:\n";
   cout << "\tEl productor siempre produce un dato cada vez y el consumidor debe tomar de dos datos a la vez.\n";
   cout << "\tSuponiendo que el buffer común es de tamaño 2, plantee una solución al problema usando semáforos.\n";
-  cout << "¿Cuantas veces cooperaran los comensales y productores? (De 1 a 10): " << endl;
   // correr problema Consumidor productor
   RunP7();
 
@@ -92,7 +91,7 @@ int main()
         }
         else
         {
-          cout << "Opcion no reconocida, intentelo de nuevo";
+          cout << "Opción no reconocida, inténtelo de nuevo";
         }
       }
       cout << endl;
@@ -111,10 +110,10 @@ int main()
       cout << "Profesor David Alonso Cantú Delgado" << endl;
       cout << "Integrantes del equipo: " << endl;
       cout << "\tLorena Ang Alcorta" << endl;
-      cout << "\tJorge Besnier Benavides" << endl;
-      cout << "\tJose Daniel Hernandez Rios" << endl;
-      cout << "\tSebastian Andres Saldana Cardenas" << endl;
-      cout << "\tJazmin Yolistli Santibanez de la Rosa" << endl;
+      cout << "\tJorge Adrián Besnier Benavides" << endl;
+      cout << "\tJosé Daniel Hernández Ríos" << endl;
+      cout << "\tSebastián Andrés Saldaña Cárdenas" << endl;
+      cout << "\tJazmín Yolistli Santibáñez de la Rosa" << endl;
       cout << endl;
       break;
     case 4:
