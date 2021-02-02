@@ -16,7 +16,7 @@ Fortalecer el aprendizaje sobre la sincronización de procesos en un aplicación
 
 
 # Contenido
-* Instrucciones	2
+* Instrucciones
 * Componentes del Código
   * Lenguaje de Programación	
   * Menú del Programa
@@ -25,6 +25,7 @@ Fortalecer el aprendizaje sobre la sincronización de procesos en un aplicación
   * Programa 3:	
 * Video de Demostración
 * Breve descripción	
+
 # Instrucciones
 
 Crear una aplicación que haga uso de threads y locks (semáforos)
