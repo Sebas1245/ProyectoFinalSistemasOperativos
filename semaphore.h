@@ -31,7 +31,9 @@ public:
   }
 
 private:
-  std::mutex mtx;
-  std::condition_variable cv;
-  int count;
+
+  std::mutex mtx;             //Ayuda a bloquear el proceso
+  std::condition_variable cv; //Ayuda a avisar que se libera un recurso
+  int count;                  //Contador del semaforo
+
 };
