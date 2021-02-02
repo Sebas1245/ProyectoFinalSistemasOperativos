@@ -57,3 +57,6 @@ Crear una aplicación que haga uso de threads y locks (semáforos)
 
 
 # Breve descripción
+
+
+# Setup para utilizar Proyecto
