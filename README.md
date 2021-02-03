@@ -17,14 +17,15 @@ Fortalecer el aprendizaje sobre la sincronización de procesos en un aplicación
 
 # Contenido
 * Instrucciones
-* Componentes del Código
+* Componentes del código
   * Lenguaje de Programación	
   * Menú del Programa
   * Programa 1: Problema de la peluquería
   * Programa 2: Ejercicio 7 - Problema Productor/Consumidor
   * Programa 3:	Ejercicio 9 - Problema H2O
-* Video de Demostración
+* Video de demostración
 * Breve descripción	
+* Setup para utilizar el proyecto
 
 # Instrucciones
 
@@ -39,11 +40,19 @@ Crear una aplicación que haga uso de threads y locks (semáforos)
 # Componentes del Código
 
 
-## Tecnologia
-
+## Lenguaje de programación
+Se eligió utilizar `C++` para utilizar la librería de `<threads>` que fue introducida a partir de `C++11`. Asimismo, se utiliza una implementación de semáforos que se puede encontrar en el archivo llamado `semaforo.h`, el cual está en el directorio raíz de este repositorio. 
 
 ## Menú del Programa
-
+El menú principal del programa presenta cuatro opciones: 
+1. Simulaciones de los problemas
+   * Lleva al menú donde se puede elegir ejecutar cualquiera de los tres problemas que se eligieron simular para este proyecto. 
+2. ¿Qué es un semaforo?
+   * Provee al usuario una corta descripción de lo que es un semáforo, ya que fue concepto clave para la realización de este proyecto. 
+3. Créditos
+   * Despliega los responsables de la realización del proyecto. 
+4. Salir
+   * Termina la ejecución de la aplicación principal del proyecto.
 
 ## Programa 1:
 
@@ -60,6 +69,7 @@ Crear una aplicación que haga uso de threads y locks (semáforos)
 # Breve descripción
 
 
-# Setup para utilizar Proyecto
-Clona este repositorio a tu directorio local de preferencia. Este proyecto fue desarollado con una librería especializada de `C++` llamada `<thread>` por lo que requiere compilarse con `C++11`o superior. El comando recomendado para su compilación manual es: 
+# Setup para utilizar el proyecto
+Clona este repositorio a tu directorio local de preferencia. Este proyecto fue desarollado con una librería especializada de `C++` llamada `<thread>` por lo que requiere compilarse con `C++11`o superior. Una vez clonado, compila el proyecto con el siguiente comando: 
 `g++ -pthread -std=c++17 main.cpp -o main`
+
