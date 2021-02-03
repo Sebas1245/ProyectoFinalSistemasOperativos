@@ -111,9 +111,7 @@ Las nuevas reglas indican lo siguiente:
   * hombre_entra_baño (Pueden estar corriendo n procesos de este tipo)
   * mujer_sale_baño (Pueden estar corriendo n procesos de este tipo)
   * hombre_sale_baño (Pueden estar corriendo n procesos de este tipo)
-  el procedimiento principal.
-  
-Explicación del código: 
+  * el procedimiento principal.
 
 # Video de demostración
 El video de demostración del proyecto se puede ver [aquí](https://drive.google.com/file/d/12r2J1lszhV_v4FrxgHSc85Mbr5Gif0-_/view?usp=sharing)
