@@ -67,10 +67,10 @@ Explicación del problema: Ejercicio 9 hecho en clase. En este problema se tiene
 
 Explicación del código:  Hay 2 semáforos: uno para llevar el conteo de los hidrógenos existentes y otro para controlar el paso de los hidrógenos, el cuál se "encendería" cuando se haya completado un grupo y así permitiría la completación de procesos. Se manejan los procesos como funciones, una para hidrógeno y otra para oxígeno. El proceso de hidrógeno aumenta el semáforo de hidrógeno y espera al semáforo de paso. El proceso de oxígeno es el "detonante" para completar los proces. Primero hay dos esperas (P) para el semáforo de hidrógenos, asegurando la existencia de al menos 2 h's. Una vez encontrados, se ejecuta la sección crítica(unión) y aumenta en 2 el semáforo de paso para dar luz verde a dos hidrógenos que se encuentran en espera. 
 
-## Programa 4: Estacionamiento
+## (Extra) Programa 4: Estacionamiento
 Explicación del problema: Se tiene un estacionamiento que tiene 1 puerta de entrada–salida y 50 lugares individuales. Se desea sincronizar la entrada y salida de carros del estacionamiento. Sólo se permite que un carro entre o salga del estacionamiento a la vez. Los carros siempre están tratando de entrar o salir del estacionamiento. Si el estacionamiento está lleno, los carros hacen fila fuera de él. Hay 2 procesos, carro entra, carro sale.
 
-## Programa 5: Baños 
+## (Extra) Programa 5: Baños 
 Explicación del problema: Ejercicio 9 hecho en clase.  El campus Monterrey está considerando implementar una política para ponerle fin a la práctica de tener baños separados por género, conservando la regla de que solo puedan ser usados por personas del mismo género al mismo tiempo.
 
 Las nuevas reglas indican lo siguiente:
