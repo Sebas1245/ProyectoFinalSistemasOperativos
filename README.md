@@ -74,4 +74,4 @@ Clona este repositorio a tu directorio local de preferencia. Este proyecto fue d
 ~~~
 g++ -pthread -std=c++17 main.cpp -o main
 ~~~
-Es importante notar que si se pretende utilizar este proyecto en **Windows** se pueden generar algunos errores debido a que se debe de contar con un compilador que soporte un entorno multithreading, por ejemplo **MinGW-w64** con la opción de `posix` habilitada al momento de instalación. Para más información sobre este problema visita [este post de Stack Overflow][https://stackoverflow.com/questions/17242516/mingw-w64-threads-posix-vs-win32].
+Es importante notar que si se pretende utilizar este proyecto en **Windows** se pueden generar algunos errores debido a que se debe de contar con un compilador que soporte un entorno multithreading, por ejemplo **MinGW-w64** con la opción de `posix` habilitada al momento de instalación. Para más información sobre este problema visita [este post de Stack Overflow](https://stackoverflow.com/questions/17242516/mingw-w64-threads-posix-vs-win32).
