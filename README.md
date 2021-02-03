@@ -73,15 +73,15 @@ Explicación del código:  Hay 2 semáforos: uno para llevar el conteo de los hi
 Explicación del problema: Se tiene un estacionamiento que tiene 1 puerta de entrada–salida y 50 lugares individuales. Se desea sincronizar la entrada y salida de carros del estacionamiento. Sólo se permite que un carro entre o salga del estacionamiento a la vez. Los carros siempre están tratando de entrar o salir del estacionamiento. Si el estacionamiento está lleno, los carros hacen fila fuera de él. Hay 2 procesos, carro entra, carro sale.
 
 Explicación del código: 
-Se utilizan tres semáforos
+* Se utilizan tres semáforos
 	* un semáforo que controla los espacios disponibles
 	* uno semáforo que controla los espacios ocupados
 	* un semáforo binario para controlar la entrada y salida de los autos
 	* adicionalmente se utiliza un contador para saber la cantidad de autos adentro del estacionamiento.
 
-Por otra parte, cuenta con tres procesos
-1.	Entra al estacionamiento donde se verifica que el estacionamiento tenga lugar disponible y verifica que pueda entrar por la puerta.
-2.	Sale de estacionamiento donde se verifica si hay autos disponibles adentro para poder sacar y verifica que pueda salir por la pueta.
+* Por otra parte, cuenta con tres procesos
+	1. Entra al estacionamiento donde se verifica que el estacionamiento tenga lugar disponible y verifica que pueda entrar por la puerta.
+	2. Sale de estacionamiento donde se verifica si hay autos disponibles adentro para poder sacar y verifica que pueda salir por la pueta.
 
 
 ## (Extra) Programa 5: Baños 
