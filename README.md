@@ -41,7 +41,7 @@ Crear una aplicación que haga uso de threads y locks (semáforos)
 
 
 ## Lenguaje de programación
-Se eligió utilizar `C++` para utilizar la librería de `<threads>` que fue introducida a partir de `C++11`. Asimismo, se utiliza una implementación de semáforos que se puede encontrar en el archivo llamado `semaforo.h`, el cual está en el directorio raíz de este repositorio. 
+Se eligió utilizar `C++` para utilizar la librería de `<thread>` que fue introducida a partir de `C++11`. Asimismo, se utiliza una implementación de semáforos que se puede encontrar en el archivo llamado `semaforo.h`, el cual está en el directorio raíz de este repositorio. 
 
 ## Menú del Programa
 El menú principal del programa presenta cuatro opciones: 
