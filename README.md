@@ -62,6 +62,8 @@ Mas informacion de este problema [aqui](https://lsi2.ugr.es/jagomez/sisopi_archi
 ## Programa 2: Productor-Consumidor
 Explicación del problema: Ejercicio 9 hecho en clase. Se tienen dos procesos concurrentes que cooperan como productor y consumidor con la siguiente restricción: El productor siempre produce un dato cada vez El consumidor debe tomar de dos datos a la vez. Suponiendo que el buffer común es de tamaño 2, plantee una solución al problema usando semáforos.
 
+Explicación del código: 
+
 ## Programa 3: H20
 Explicación del problema: Ejercicio 9 hecho en clase. En este problema se tienen los procesos de Hidrógeno y Oxígeno, se busca que solo puedan ser procesados en grupos de 3, teniendo 2 hidrógenos y un oxígeno. De no cumplirse el grupo de 3, los procesos estarían en espera hasta completarse el grupo. 
 
@@ -69,6 +71,18 @@ Explicación del código:  Hay 2 semáforos: uno para llevar el conteo de los hi
 
 ## (Extra) Programa 4: Estacionamiento
 Explicación del problema: Se tiene un estacionamiento que tiene 1 puerta de entrada–salida y 50 lugares individuales. Se desea sincronizar la entrada y salida de carros del estacionamiento. Sólo se permite que un carro entre o salga del estacionamiento a la vez. Los carros siempre están tratando de entrar o salir del estacionamiento. Si el estacionamiento está lleno, los carros hacen fila fuera de él. Hay 2 procesos, carro entra, carro sale.
+
+Explicación del código: 
+Se utilizan tres semáforos
+	* un semáforo que controla los espacios disponibles
+	* uno semáforo que controla los espacios ocupados
+	* un semáforo binario para controlar la entrada y salida de los autos
+	* adicionalmente se utiliza un contador para saber la cantidad de autos adentro del estacionamiento.
+
+Por otra parte, cuenta con tres procesos
+1.	Entra al estacionamiento donde se verifica que el estacionamiento tenga lugar disponible y verifica que pueda entrar por la puerta.
+2.	Sale de estacionamiento donde se verifica si hay autos disponibles adentro para poder sacar y verifica que pueda salir por la pueta.
+
 
 ## (Extra) Programa 5: Baños 
 Explicación del problema: Ejercicio 9 hecho en clase.  El campus Monterrey está considerando implementar una política para ponerle fin a la práctica de tener baños separados por género, conservando la regla de que solo puedan ser usados por personas del mismo género al mismo tiempo.
@@ -79,12 +93,13 @@ Las nuevas reglas indican lo siguiente:
  3. Cuando el baño este vació puede ser usado por un hombre o una mujer y se mantendrá dedicado al género que entró al baño, hasta que salga la última persona de ese género.
  4. Puedes asumir que los baños tienen capacidad infinita, es decir, cualquier persona que quiera entrar al baño lo va a poder hacer siempre y cuando este vació u ocupado por personas del mismo género y que la puerta no la esté usando nadie.
  5. procedimientos:
-
   * mujer_entra_baño (Pueden estar corriendo n procesos de este tipo)
   * hombre_entra_baño (Pueden estar corriendo n procesos de este tipo)
   * mujer_sale_baño (Pueden estar corriendo n procesos de este tipo)
   * hombre_sale_baño (Pueden estar corriendo n procesos de este tipo)
   el procedimiento principal.
+  
+Explicación del código: 
 
 # Video de demostración
 El video de demostración del proyecto se puede ver [aquí](https://drive.google.com/file/d/12r2J1lszhV_v4FrxgHSc85Mbr5Gif0-_/view?usp=sharing)
