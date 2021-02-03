@@ -67,7 +67,13 @@ Explicación del código:
 ## Programa 3: H20
 Explicación del problema: Ejercicio 9 hecho en clase. En este problema se tienen los procesos de Hidrógeno y Oxígeno, se busca que solo puedan ser procesados en grupos de 3, teniendo 2 hidrógenos y un oxígeno. De no cumplirse el grupo de 3, los procesos estarían en espera hasta completarse el grupo. 
 
-Explicación del código:  Hay 2 semáforos: uno para llevar el conteo de los hidrógenos existentes y otro para controlar el paso de los hidrógenos, el cuál se "encendería" cuando se haya completado un grupo y así permitiría la completación de procesos. Se manejan los procesos como funciones, una para hidrógeno y otra para oxígeno. El proceso de hidrógeno aumenta el semáforo de hidrógeno y espera al semáforo de paso. El proceso de oxígeno es el "detonante" para completar los proces. Primero hay dos esperas (P) para el semáforo de hidrógenos, asegurando la existencia de al menos 2 h's. Una vez encontrados, se ejecuta la sección crítica(unión) y aumenta en 2 el semáforo de paso para dar luz verde a dos hidrógenos que se encuentran en espera. 
+Explicación del código:  
+* Hay 2 semáforos: uno para llevar el conteo de los hidrógenos existentes y otro para controlar el paso de los hidrógenos, el cuál se "encendería" cuando se haya completado un grupo y así permitiría la completación de procesos. 
+* Se manejan los procesos como funciones, una para hidrógeno y otra para oxígeno. 
+	* El proceso de hidrógeno aumenta el semáforo de hidrógeno y espera al semáforo de paso. 
+	* El proceso de oxígeno es el "detonante" para completar los proces. 
+	* Primero hay dos esperas (P) para el semáforo de hidrógenos, asegurando la existencia de al menos 2 h's. 
+* Una vez encontrados, se ejecuta la sección crítica(unión) y aumenta en 2 el semáforo de paso para dar luz verde a dos hidrógenos que se encuentran en espera. 
 
 ## (Extra) Programa 4: Estacionamiento
 Explicación del problema: Se tiene un estacionamiento que tiene 1 puerta de entrada–salida y 50 lugares individuales. Se desea sincronizar la entrada y salida de carros del estacionamiento. Sólo se permite que un carro entre o salga del estacionamiento a la vez. Los carros siempre están tratando de entrar o salir del estacionamiento. Si el estacionamiento está lleno, los carros hacen fila fuera de él. Hay 2 procesos, carro entra, carro sale.
