@@ -93,12 +93,12 @@ El video de demostración del proyecto se puede ver [aquí](https://drive.google
 Para el funcionamiento correcto y más sencillo del proyecto se requiere de la versión más actualizada del software de repl.it, o bien existen otras opciones similares que pueden funcionar. Sin embargo, nosotros consideramos como mejor opción repl.it por su simplicidad y capacidad de colaboración.
 
 Instrucciones para probar el código:
-Opción 1: Acceder directamente al nuestro repl.it mediante este [link](https://repl.it/join/hdcwobzj-loreang98) y utilizar el botón de run en la parte superior para correr el programa. Posteriormente, seguir instrucciones del menú.
-Opción 2: Descargar el archivo main.cpp y el archivo semaphore.h, enseguida crear su propio repositorio de repl.it o software que usted crea conveniente (no garantizamos funcionamiento en otro software).
+ * Opción 1: Acceder directamente al nuestro repl.it mediante este [link](https://repl.it/join/hdcwobzj-loreang98) y utilizar el botón de run en la parte superior para correr el programa. Posteriormente, seguir instrucciones del menú.
+ * Opción 2: Descargar el archivo main.cpp y el archivo semaphore.h, enseguida crear su propio repositorio de repl.it o software que usted crea conveniente (no garantizamos funcionamiento en otro software).
 
 Archivos que conforman el proyecto:
-main.cpp: incluye el menú principal, descripción de los problemas y finalmente los problemas de sincronización.
-Semaphore.h: funcionamiento básico para sincronizar procesos donde se incluye una clase publica para poder crear objectos en el main, por otra parte se incluye la función void V() que libera un recurso y p() para revisar la disponibilidad del recurso que se busca utilizar. 
+ * main.cpp: incluye el menú principal, descripción de los problemas y finalmente los problemas de sincronización.
+ * Semaphore.h: funcionamiento básico para sincronizar procesos donde se incluye una clase publica para poder crear objectos en el main, por otra parte se incluye la función void V() que libera un recurso y p() para revisar la disponibilidad del recurso que se busca utilizar. 
 
 # Setup para utilizar el proyecto
 Clona este repositorio a tu directorio local de preferencia. Este proyecto fue desarollado con una librería especializada de `C++` llamada `<thread>` por lo que requiere compilarse con `C++11` o superior. Una vez clonado, compila el proyecto con el siguiente comando:
