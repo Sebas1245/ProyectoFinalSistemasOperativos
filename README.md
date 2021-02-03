@@ -63,6 +63,14 @@ Mas informacion de este problema [aqui](https://lsi2.ugr.es/jagomez/sisopi_archi
 Explicación del problema: Ejercicio 9 hecho en clase. Se tienen dos procesos concurrentes que cooperan como productor y consumidor con la siguiente restricción: El productor siempre produce un dato cada vez El consumidor debe tomar de dos datos a la vez. Suponiendo que el buffer común es de tamaño 2, plantee una solución al problema usando semáforos.
 
 Explicación del código: 
+* Se utilizan dos semáforos
+	* un semáforo que controla los espacios disponibles
+	* un semáforo que controla los espacios ocupados
+	* adicionalmente se utiliza un contador para saber la cantidad de cooperaciones exitosas entre productor-consumidor.
+* Por otra parte, cuenta con dos procesos
+	* El proceso de productor produce mientras tenga espacios disponibles
+	* El consumidor espera a que el productor haya producido dos unidades para poder consumir
+	* Finalmente el contador nos indica cuantas operaciones exitosas se han realizado.
 
 ## Programa 3: H20
 Explicación del problema: Ejercicio 9 hecho en clase. En este problema se tienen los procesos de Hidrógeno y Oxígeno, se busca que solo puedan ser procesados en grupos de 3, teniendo 2 hidrógenos y un oxígeno. De no cumplirse el grupo de 3, los procesos estarían en espera hasta completarse el grupo. 
