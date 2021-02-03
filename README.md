@@ -65,8 +65,8 @@ Explicación del problema: Ejercicio 9 hecho en clase. En este problema se tiene
 
 Explicación del código:  Hay 2 semáforos: uno para llevar el conteo de los hidrógenos existentes y otro para controlar el paso de los hidrógenos, el cuál se "encendería" cuando se haya completado un grupo y así permitiría la completación de procesos. Se manejan los procesos como funciones, una para hidrógeno y otra para oxígeno. El proceso de hidrógeno aumenta el semáforo de hidrógeno y espera al semáforo de paso. El proceso de oxígeno es el "detonante" para completar los proces. Primero hay dos esperas (P) para el semáforo de hidrógenos, asegurando la existencia de al menos 2 h's. Una vez encontrados, se ejecuta la sección crítica(unión) y aumenta en 2 el semáforo de paso para dar luz verde a dos hidrógenos que se encuentran en espera. 
 
-# Video de Demostración
-
+# Video de demostración
+El video de demostración del proyecto se puede ver [aquí](https://drive.google.com/file/d/12r2J1lszhV_v4FrxgHSc85Mbr5Gif0-_/view?usp=sharing)
 
 # Breve descripción
 
