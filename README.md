@@ -72,6 +72,5 @@ El menú principal del programa presenta cuatro opciones:
 # Setup para utilizar el proyecto
 Clona este repositorio a tu directorio local de preferencia. Este proyecto fue desarollado con una librería especializada de `C++` llamada `<thread>` por lo que requiere compilarse con `C++11` o superior. Una vez clonado, compila el proyecto con el siguiente comando:
 
-                              `g++ -pthread -std=c++17 main.cpp -o main`
-                              
+                                                 g++ -pthread -std=c++17 main.cpp -o main
 Es importante notar que si se pretende utilizar este proyecto en **Windows** se debe de contar con un compilador que soporte un entorno multithreading, por ejemplo **MinGW-w64**. Ciertamente, la bandera `-pthread` tiene el propósito de hacerle saber al compilador que se pretende utilizar multithreading, pero aún así se pueden generar errores con ciertos compiladores. 
