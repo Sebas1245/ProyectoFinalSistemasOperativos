@@ -127,7 +127,7 @@ Archivos que conforman el proyecto:
  * main.cpp: incluye el menú principal, descripción de los problemas y finalmente los problemas de sincronización.
  * Semaphore.h: funcionamiento básico para sincronizar procesos donde se incluye una clase publica para poder crear objectos en el main, por otra parte se incluye la función void V() que libera un recurso y p() para revisar la disponibilidad del recurso que se busca utilizar. 
 
-# Setup para utilizar el proyecto
+# Otro Setup para utilizar el proyecto
 Clona este repositorio a tu directorio local de preferencia. Este proyecto fue desarollado con una librería especializada de `C++` llamada `<thread>` por lo que requiere compilarse con `C++11` o superior. Una vez clonado, compila el proyecto con el siguiente comando:
 ~~~
 g++ -pthread -std=c++17 main.cpp -o main
