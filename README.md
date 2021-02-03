@@ -114,7 +114,7 @@ Las nuevas reglas indican lo siguiente:
   * el procedimiento principal.
 
 # Video de demostración
-El video de demostración del proyecto se puede ver [aquí](https://drive.google.com/file/d/12r2J1lszhV_v4FrxgHSc85Mbr5Gif0-_/view?usp=sharing)
+El video de demostración del proyecto se puede ver [aquí](https://drive.google.com/file/d/1h1cCvYKnvOgU50Wl9wVhxJnEuyXFcgjt/view?usp=sharing)
 
 # Breve descripción
 Para el funcionamiento correcto y más sencillo del proyecto se requiere de la versión más actualizada del software de repl.it, o bien existen otras opciones similares que pueden funcionar. Sin embargo, nosotros consideramos como mejor opción repl.it por su simplicidad y capacidad de colaboración.
