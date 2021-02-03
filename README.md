@@ -55,7 +55,9 @@ El menú principal del programa presenta cuatro opciones:
    * Termina la ejecución de la aplicación principal del proyecto.
 
 ## Programa 1:
+La barbería esta regentada por un peluquero, tiene una silla para atender a los clientes y sillas para que esperen los clientes. Si no hay clientes, el peluquero espera durmiendo a que entren a la peluquería. Cuando llega un cliente, tiene que despertar al peluquero. Si llegan más clientes mientras el peluquero está atendiendo a un cliente se sientan si hay sillas libres, o se van si no pueden sentarse.
 
+Mas informacion de este problema [aqui](https://lsi2.ugr.es/jagomez/sisopi_archivos/Sincronizacion.htm#ExPelu)
 
 ## Programa 2:
 
@@ -65,11 +67,23 @@ Explicación del problema: Ejercicio 9 hecho en clase. En este problema se tiene
 
 Explicación del código:  Hay 2 semáforos: uno para llevar el conteo de los hidrógenos existentes y otro para controlar el paso de los hidrógenos, el cuál se "encendería" cuando se haya completado un grupo y así permitiría la completación de procesos. Se manejan los procesos como funciones, una para hidrógeno y otra para oxígeno. El proceso de hidrógeno aumenta el semáforo de hidrógeno y espera al semáforo de paso. El proceso de oxígeno es el "detonante" para completar los proces. Primero hay dos esperas (P) para el semáforo de hidrógenos, asegurando la existencia de al menos 2 h's. Una vez encontrados, se ejecuta la sección crítica(unión) y aumenta en 2 el semáforo de paso para dar luz verde a dos hidrógenos que se encuentran en espera. 
 
+## Programa 4:
+
+## Programa 5:
+
 # Video de demostración
 El video de demostración del proyecto se puede ver [aquí](https://drive.google.com/file/d/12r2J1lszhV_v4FrxgHSc85Mbr5Gif0-_/view?usp=sharing)
 
 # Breve descripción
+Para el funcionamiento correcto y más sencillo del proyecto se requiere de la versión más actualizada del software de repl.it, o bien existen otras opciones similares que pueden funcionar. Sin embargo, nosotros consideramos como mejor opción repl.it por su simplicidad y capacidad de colaboración.
 
+Instrucciones para probar el código:
+Opción 1: Acceder directamente al nuestro repl.it mediante este [link](https://repl.it/join/hdcwobzj-loreang98) y utilizar el botón de run en la parte superior para correr el programa. Posteriormente, seguir instrucciones del menú.
+Opción 2: Descargar el archivo main.cpp y el archivo semaphore.h, enseguida crear su propio repositorio de repl.it o software que usted crea conveniente (no garantizamos funcionamiento en otro software).
+
+Archivos que conforman el proyecto:
+main.cpp: incluye el menú principal, descripción de los problemas y finalmente los problemas de sincronización.
+Semaphore.h: funcionamiento básico para sincronizar procesos donde se incluye una clase publica para poder crear objectos en el main, por otra parte se incluye la función void V() que libera un recurso y p() para revisar la disponibilidad del recurso que se busca utilizar. 
 
 # Setup para utilizar el proyecto
 Clona este repositorio a tu directorio local de preferencia. Este proyecto fue desarollado con una librería especializada de `C++` llamada `<thread>` por lo que requiere compilarse con `C++11` o superior. Una vez clonado, compila el proyecto con el siguiente comando:
